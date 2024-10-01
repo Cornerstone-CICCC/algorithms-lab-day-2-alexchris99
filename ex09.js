@@ -5,7 +5,6 @@
 const sortByProperty = function(people, property){
     let sorted = people;
     let s = property
-    console.log(s)
 
     sorted.sort(function(a,b){
         return a[s] - b[s]
