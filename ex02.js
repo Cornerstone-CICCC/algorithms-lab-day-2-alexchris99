@@ -2,7 +2,7 @@
 // containing the elements that are in the first array but not in the second array.
 // Example: arrayDifference([1, 2, 3], [2, 3, 4]) should return [1].
 
-arrayDifference = function(arr1, arr2){
+const arrayDifference = function(arr1, arr2){
     let notIn = arr1.filter(element => !arr2.includes(element))
     return notIn
 }

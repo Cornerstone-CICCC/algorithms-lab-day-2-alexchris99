@@ -3,7 +3,7 @@
 // (e.g., the presence of "@" and a ".").
 // Example: validateEmail("test@example.com") should return true.
 
-validateEmail = function(email){
+const validateEmail = function(email){
     let newEmail = email.split("")
     let validators  = ["@"]
     let count = 0

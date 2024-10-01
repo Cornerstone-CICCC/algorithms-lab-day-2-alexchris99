@@ -2,7 +2,7 @@
 // that appears the most times. If there is a tie, return the first character that reaches the maximum frequency.
 // Example: mostFrequentChar("javascript") should return "a".
 
-mostFrequentChar = function(string){
+const mostFrequentChar = function(string){
     let arr = string.split("")
 
     let letters = arr.reduce((acumulator, index)=>{

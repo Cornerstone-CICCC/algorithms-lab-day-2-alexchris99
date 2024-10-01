@@ -2,7 +2,7 @@
 // with the first letter of each word capitalized.
 // Example: capitalizeWords("hello world") should return "Hello World".
 
-capitalizeWords = function(string){
+const capitalizeWords = function(string){
     let newString = string.split(" ")
     let stringFinal = ""
     for(let i = 0; i < newString.length; i++){
