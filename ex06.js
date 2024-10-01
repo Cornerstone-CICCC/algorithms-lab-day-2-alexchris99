@@ -9,8 +9,10 @@ getQueryParams = function(url){
     newUrl = newUrl.split(/=|&/)
  
     let obj = {}
-    obj[newUrl[0]] = newUrl[1]
-    obj[newUrl[2]] = newUrl[3]
+    
+    for(let i = 0; i < newUrl.length; i+=2){
+        obj[newUrl[i]] = newUrl[i+1]
+    }
 
     return obj
 }
