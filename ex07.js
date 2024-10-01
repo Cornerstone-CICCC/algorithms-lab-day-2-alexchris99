@@ -4,14 +4,22 @@
 // Example: validateEmail("test@example.com") should return true.
 
 validateEmail = function(email){
-    let validators = ["@","."]
     let newEmail = email.split("")
-    console.log(newEmail)
-    if(validators in newEmail){
+    let validators  = ["@"]
+    let count = 0
+    for(let i = 0; i < validators.length; i++){
+        for(let j = 0; j < newEmail.length; j++){
+            if(validators[i] == newEmail[j]){
+                count +=1
+            }
+        }
+    }
+    if(newEmail.includes("@") && newEmail.includes(".") && count == 1){
         return true
     }else{
         return false
     }
+
 }
 
 console.log(validateEmail("test@example.com")); // Expected output: true
