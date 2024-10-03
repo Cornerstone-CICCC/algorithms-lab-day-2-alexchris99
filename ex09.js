@@ -4,10 +4,10 @@
 // should return [{name: "Bob", age: 25}, {name: "Alice", age: 30}].
 const sortByProperty = function(people, property){
     let sorted = people;
-    let s = property
+    let prop = property
 
     sorted.sort(function(a,b){
-        return a[s] - b[s]
+        return a[prop] - b[prop]
     })
 
     return sorted

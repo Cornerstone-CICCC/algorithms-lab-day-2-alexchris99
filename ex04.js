@@ -5,16 +5,20 @@
 const mostFrequentChar = function(string){
     let arr = string.split("")
 
+    let FrequentChar = ''
     let letters = arr.reduce((acumulator, index)=>{
         if(!acumulator[index]){
             acumulator[index] = 1
         }else{
             acumulator[index] +=1
+            if(FrequentChar < acumulator[index]){
+                FrequentChar = index
+            }
         }
         return acumulator
     }, {})
 
-    return Object.keys(letters).reduce((a, b) => letters[a] > letters[b] ? a : b)
+    return FrequentChar
 }
 
-console.log(mostFrequentChar("Hellooo")); // Expected output: "a"
+console.log(mostFrequentChar("horripilante")); // Expected output: "a"
